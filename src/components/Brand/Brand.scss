@@ -1,0 +1,62 @@
+.brand-section {
+  background-color: #eecdb7; // 살구빛 배경
+  text-align: center;
+  margin: 140px 0 0 0;
+  padding: 80px 20px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .brand-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; // 기본적으로 줄바꿈 허용
+    margin: 0 auto;
+  }
+
+  .brand-card {
+    flex: 1 1 25%; // 기본 4개 (PC)
+    max-width: 332px;
+    cursor: pointer;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h3 {
+      margin-top: 12px;
+      line-height: 24px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+/* ✅ 반응형 */
+@media (max-width: 1024px) {
+  .brand-section .brand-card {
+    flex: 1 1 45%; // 태블릿에서는 2개씩
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-section .brand-card {
+    flex: 1 1 100%; // 모바일에서는 1개씩
+    max-width: 100%;
+  }
+}

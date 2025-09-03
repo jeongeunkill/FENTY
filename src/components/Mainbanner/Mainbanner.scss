@@ -1,0 +1,161 @@
+.main-banner {
+  width: 100%;   // ✅ 화면 가로 100%
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+  z-index: 1;
+
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 100%;   // ✅ 슬라이드도 화면 100%
+
+    img {
+      width: 100%;     // 👉 가로는 100%
+      height: auto;    // 👉 세로는 비율 유지
+      display: block;
+      object-fit: cover;
+    }
+
+    /* 텍스트 박스 공통 */
+    .banner-text {
+      position: absolute;
+      color: #111;
+
+
+      span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+
+      .span1{
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+      }
+
+      .span3{
+        display: block;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+      }
+
+      h2 {
+        font-size: 32px;
+        line-height: 40px;
+        padding-bottom: 15px;
+      }
+      
+      .h23{
+        font-size: 32px;
+        line-height: 40px;
+        padding-bottom: 15px;
+        color: #fff;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .p3{
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #fff;
+      }
+
+      a {
+        display: inline-block;
+        padding: 15px 50px;
+        font-weight: bold;
+        background: #000;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .a3{
+        display: inline-block;
+        padding: 15px 50px;
+        font-weight: bold;
+        background: #ffffff;
+        color: #000000;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+    }
+
+    /* ✅ 각 배너별 개별 위치 설정 */
+    .banner-text-1 {
+        width: 700px;
+      bottom: 80px;
+      left: 80px;
+      background: none;
+    }
+
+    .banner-text-2 {
+    max-width: 518px;
+      padding: 60px;
+      background: #eacecf;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .banner-text-3 {
+        max-width: 518px;
+      padding: 60px;
+      background: #b67233;
+      bottom: 185px;
+      left: 40px;
+      text-align: left;
+    }
+
+    .banner-text-4 {
+        max-width: 518px;
+      padding: 60px 130px 60px 60px;
+      background: #5f2717;
+      bottom: 40px;
+      left: 40px;
+    }
+  }
+
+  /* 페이지네이션 (점) 스타일 */
+  .swiper-pagination {
+    bottom: 20px !important;
+
+    .swiper-pagination-bullet {
+      background: none;
+      border: 1px solid #000;
+      opacity: 0.6;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #000;
+      opacity: 1;
+    }
+  }
+}

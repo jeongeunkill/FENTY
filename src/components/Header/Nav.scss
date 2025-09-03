@@ -1,0 +1,361 @@
+/* 네비게이션 */
+  .nav {
+  position: relative;
+
+  .nav-main {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .nav-item {
+      position: relative;
+      cursor: pointer;
+
+      .nav-title {
+        font-weight: 500;
+        padding: 10px;
+      }
+
+      .nav-sub {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100vw;
+        background: #fff;
+        border-top: 1px solid #eee;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &.active {
+          max-height: 800px;
+          opacity: 1;
+        }
+
+        .nav-sub-content {
+          display: flex;
+          padding: 20px 40px;
+
+          /* ---------------- LEFT ---------------- */
+          .sub-left {
+            width: 240px;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+
+              li {
+                margin-bottom: 10px;
+
+                a {
+                  color: #111;
+                  font-size: 14px;
+                  text-decoration: none;
+
+                  &:hover {
+                    color: gray;
+                  }
+                }
+              }
+            }
+          }
+
+          /* ---------------- RIGHT ---------------- */
+          .sub-right {
+            flex: 1;
+            display: flex;
+            gap: 30px;
+          }
+
+          /* ----------- 제품 카드 ----------- */
+          .product-card {
+            width: 220px;
+
+            .img-wrap {
+              position: relative;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                display: block;
+                transition: opacity 0.3s ease;
+              }
+
+              .hover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              }
+
+              .badge-img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 60px;
+                height: auto;
+                z-index: 2;
+              }
+
+              .wishlist-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: white;
+                border: none;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                cursor: pointer;
+              }
+
+              .cta-btn {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 12px;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: none;
+                opacity: 0;
+                transition: opacity 0.3s;
+                cursor: pointer;
+
+                &.black {
+                  background: black;
+                  color: white;
+                }
+                &.white {
+                  background: white;
+                  color: black;
+                  border-top: 1px solid #ddd;
+                }
+              }
+
+              &:hover {
+                .default-img {
+                  opacity: 0;
+                }
+                .hover-img {
+                  opacity: 1;
+                }
+                .wishlist-btn,
+                .cta-btn {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .name {
+              font-weight: bold;
+              margin-top: 10px;
+              font-size: 14px;
+            }
+
+            .shades {
+              font-size: 13px;
+              margin: 5px 0;
+
+              a {
+                color: #111;
+                text-decoration: underline;
+              }
+            }
+
+            .desc {
+              font-size: 12px;
+              color: #555;
+              margin: 5px 0;
+              line-height: 1.4;
+            }
+
+            .price {
+              font-size: 14px;
+              margin-top: 5px;
+
+              .original {
+                text-decoration: line-through;
+                color: #999;
+                margin-right: 8px;
+              }
+
+              .sale {
+                color: #d32f2f;
+                font-weight: bold;
+              }
+
+              .extra {
+                font-size: 12px;
+                color: #555;
+              }
+            }
+          }
+
+          /* ----------- 배너 그룹 (Virtual, Discover) ----------- */
+          .banner-group {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+
+            .banner {
+              position: relative;
+              flex: 1;
+
+              .banner-img {
+                width: 100%;
+                height: auto;
+              }
+
+              .banner-content {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                color: white;
+
+                .subtitle {
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  opacity: 0.8;
+                  margin-bottom: 6px;
+                  display: block;
+                }
+
+                h3 {
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-bottom: 10px;
+                }
+
+                p {
+                  font-size: 13px;
+                  margin-bottom: 12px;
+                }
+
+                .banner-btn {
+                  display: inline-block;
+                  padding: 10px 16px;
+                  font-size: 13px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+
+                  &.white {
+                    background: white;
+                    color: black;
+                  }
+
+                  &.black {
+                    background: black;
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+
+          /* ----------- 단일 배너 (Rihanna, Replen) ----------- */
+          .banner {
+            position: relative;
+
+            .banner-img {
+              width: 100%;
+              display: block;
+            }
+
+            .banner-content {
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              right: 20px;
+              color: white;
+
+              h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+
+              p {
+                font-size: 13px;
+                margin-bottom: 12px;
+              }
+
+              .banner-btn {
+                display: inline-block;
+                padding: 10px 16px;
+                font-size: 13px;
+                font-weight: bold;
+
+                &.white {
+                  background: white;
+                  color: black;
+                }
+
+                &.black {
+                  background: black;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          /* ----------- Sale Left Swiper ----------- */
+          .left-swiper {
+            margin-top: 20px;
+
+            .swiper-wrapper {
+              display: flex;
+              overflow: hidden;
+            }
+
+            .swiper-slide {
+              min-width: 100%;
+              position: relative;
+
+              img {
+                width: 100%;
+                display: block;
+              }
+
+              .slide-content {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                color: white;
+
+                h4 {
+                  font-size: 14px;
+                  font-weight: bold;
+                  margin-bottom: 6px;
+                }
+
+                p {
+                  font-size: 12px;
+                  margin-bottom: 10px;
+                }
+
+                .slide-btn {
+                  display: inline-block;
+                  padding: 6px 12px;
+                  background: white;
+                  color: black;
+                  font-size: 12px;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

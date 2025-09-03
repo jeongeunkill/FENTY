@@ -1,0 +1,33 @@
+.contents {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 120px auto;
+  max-width: 1200px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+
+  .content-card {
+    flex: 1;
+    cursor: pointer; // ✅ 전체 영역 커서포인터
+
+    img {
+      width: 485px;
+      height: auto;
+      display: block;
+    }
+
+    h3 {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+  }
+}

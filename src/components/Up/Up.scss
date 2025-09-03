@@ -1,0 +1,213 @@
+.up-section {
+  width: 100%;
+  margin: 80px auto;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-left: 40px;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 40px;
+    margin-left: 40px;
+  }
+
+  .swiper {
+    padding-bottom: 50px;
+    margin-left: 40px;
+  }
+
+  .swiper-slide {
+    width: 400px !important;
+    margin-right: 20px;
+
+    .product-card {
+      text-align: left;
+      cursor: pointer;
+
+      .img-wrap {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+
+        .hover-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        /* 텍스트 뱃지 */
+        .badge {
+          position: absolute;
+          top: 10px;
+          left: 0px;
+          background: #ffffff;
+          color: #000000;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 6px;
+
+          &.extra {
+            left: 70px;
+            background: #ffffff;
+            color: #000;
+          }
+        }
+
+        /* PNG 뱃지 */
+        .badge-img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 50px;
+          height: auto;
+        }
+
+        .wishlist-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        .cta-btn {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          font-size: 13px;
+          padding: 8px;
+          background: #000;
+          color: #fff;
+          font-weight: 600;
+          text-transform: uppercase;
+          text-align: center;
+          border: none;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        /* ✅ 이미지에 hover할 때만 동작 */
+        &:hover {
+          .hover-img {
+            opacity: 1;
+          }
+          .wishlist-btn,
+          .cta-btn {
+            opacity: 1;
+          }
+          .badge,
+          .badge.extra,
+          .badge-img {
+            opacity: 0;
+          }
+        }
+      }
+
+      .name {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 14px 0 6px;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+      .shades {
+        font-size: 15px;
+        color: #111;
+        text-decoration: underline;
+        margin-bottom: 6px;
+        display: inline-block;
+      }
+
+      .rating {
+        font-size: 14px;
+        color: #000; // 검정 별
+        margin-bottom: 6px;
+      }
+
+      .price {
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+        .original {
+          text-decoration: line-through;
+          color: #333;
+          margin-right: 6px;
+        }
+
+        .sale {
+          color: #d32f2f;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  /* 화살표 버튼 */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+    /* border: 1px solid #000;
+    border-radius: 50%; */
+    /* background: #fff; */
+    top: -40px;
+    color: #000;
+    z-index: 20;
+
+    &:after {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .swiper-button-prev {
+    right: 60px;
+    left: auto;
+  }
+
+  .swiper-button-next {
+    right: 20px;
+  }
+
+  /* 스크롤바 */
+  .swiper-scrollbar {
+    background: #eee;
+    height: 4px;
+    border-radius: 2px;
+
+    .swiper-scrollbar-drag {
+      background: #000;
+    }
+  }
+
