@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FENTY/static/css/main.b74eaa75.css",
-    "main.js": "/FENTY/static/js/main.d484a96e.js",
+    "main.css": "/FENTY/static/css/main.c72db28e.css",
+    "main.js": "/FENTY/static/js/main.7e05d548.js",
     "static/js/453.5528d851.chunk.js": "/FENTY/static/js/453.5528d851.chunk.js",
     "static/media/main03.jpg": "/FENTY/static/media/main03.bc8aa64210ca56734905.jpg",
     "static/media/virtual02.png": "/FENTY/static/media/virtual02.5434085c48ad196cdb7b.png",
@@ -129,12 +129,12 @@
     "static/media/Youtube.png": "/FENTY/static/media/Youtube.595300b138e55f210df0.png",
     "static/media/kr.svg": "/FENTY/static/media/kr.383307b02644919b9c88bf3cbde2d268.svg",
     "index.html": "/FENTY/index.html",
-    "main.b74eaa75.css.map": "/FENTY/static/css/main.b74eaa75.css.map",
-    "main.d484a96e.js.map": "/FENTY/static/js/main.d484a96e.js.map",
+    "main.c72db28e.css.map": "/FENTY/static/css/main.c72db28e.css.map",
+    "main.7e05d548.js.map": "/FENTY/static/js/main.7e05d548.js.map",
     "453.5528d851.chunk.js.map": "/FENTY/static/js/453.5528d851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b74eaa75.css",
-    "static/js/main.d484a96e.js"
+    "static/css/main.c72db28e.css",
+    "static/js/main.7e05d548.js"
   ]
 }
