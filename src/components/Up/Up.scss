@@ -109,7 +109,7 @@
           transition: opacity 0.3s;
         }
 
-        /* ✅ 이미지에 hover할 때만 동작 */
+        /* ✅ 이미지 hover */
         &:hover {
           .hover-img {
             opacity: 1;
@@ -127,16 +127,16 @@
       }
 
       .name {
-      font-weight: bold;
-      font-size: 14px;
-      margin: 14px 0 6px;
-    }
+        font-weight: bold;
+        font-size: 14px;
+        margin: 14px 0 6px;
+      }
 
-    .desc {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 4px;
-    }
+      .desc {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 4px;
+      }
 
       .shades {
         font-size: 15px;
@@ -148,27 +148,26 @@
 
       .rating {
         font-size: 14px;
-        color: #000; // 검정 별
+        color: #000;
         margin-bottom: 6px;
       }
 
       .price {
-      font-size: 15px;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 10px;
-    }
+        font-size: 15px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 10px;
+      }
 
-        .original {
-          text-decoration: line-through;
-          color: #333;
-          margin-right: 6px;
-        }
+      .original {
+        text-decoration: line-through;
+        color: #333;
+        margin-right: 6px;
+      }
 
-        .sale {
-          color: #d32f2f;
-          font-weight: bold;
-        }
+      .sale {
+        color: #d32f2f;
+        font-weight: bold;
       }
     }
   }
@@ -178,9 +177,6 @@
   .swiper-button-next {
     width: 36px;
     height: 36px;
-    /* border: 1px solid #000;
-    border-radius: 50%; */
-    /* background: #fff; */
     top: -40px;
     color: #000;
     z-index: 20;
@@ -210,4 +206,113 @@
       background: #000;
     }
   }
+}
 
+/* ================== 반응형 ================== */
+
+/* 1024px 이하 (태블릿) */
+@media (max-width: 1024px) {
+  .up-section {
+    h2 {
+      font-size: 28px;
+      margin-left: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    .swiper {
+      margin-left: 20px;
+    }
+
+    .swiper-slide {
+      width: 300px !important;
+
+      .product-card {
+        .name {
+          font-size: 13px;
+        }
+        .desc,
+        .shades,
+        .rating,
+        .price {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+/* 768px 이하 (모바일) */
+@media (max-width: 768px) {
+  .up-section {
+    margin: 40px auto;
+
+    h2 {
+      font-size: 22px;
+      margin-left: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+
+    .swiper {
+      margin-left: 10px;
+    }
+
+    .swiper-slide {
+      width: 240px !important;
+
+      .product-card {
+        .name {
+          font-size: 12px;
+        }
+        .desc,
+        .shades,
+        .rating,
+        .price {
+          font-size: 12px;
+        }
+      }
+    }
+
+    /* 모바일에서는 화살표 버튼 숨김 */
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
+/* 480px 이하 (작은 모바일) */
+@media (max-width: 480px) {
+  .up-section {
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .swiper-slide {
+      width: 200px !important;
+
+      .product-card {
+        .name {
+          font-size: 11px;
+        }
+        .desc,
+        .shades,
+        .rating,
+        .price {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

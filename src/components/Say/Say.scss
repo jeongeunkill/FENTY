@@ -27,9 +27,9 @@
     text-align: center;
 
     img {
-      width: 100%;              /* ✅ 반응형 */
-      max-width: 534px;         /* ✅ 원래 사이즈 기준 */
-      aspect-ratio: 16 / 11;    /* ✅ 비율 고정 */
+      width: 100%;
+      max-width: 534px;
+      aspect-ratio: 16 / 11;
       height: auto;
       object-fit: cover;
       display: block;
@@ -111,7 +111,7 @@
 
 /* ================== 반응형 ================== */
 
-/* 1024px 이하 */
+/* 1024px 이하 (태블릿) */
 @media (max-width: 1024px) {
   .say-section {
     margin: 300px 0 0 0;
@@ -120,34 +120,48 @@
     h2 {
       font-size: 28px;
     }
+
     p {
       font-size: 14px;
       margin-bottom: 30px;
     }
 
     .say-card img {
-      max-width: 420px; /* ✅ 크기 축소 */
+      max-width: 420px; // 살짝 줄임
+    }
+
+    .say-card .text-box {
+      h3, .title {
+        font-size: 20px;
+      }
+      p {
+        font-size: 13px;
+      }
     }
   }
 }
 
-/* 768px 이하 */
+/* 768px 이하 (모바일) */
 @media (max-width: 768px) {
   .say-section {
-    margin: 200px 0 0 0;
+    margin: 50px 0 0 0;
     padding-left: 10px;
 
     h2 {
       font-size: 24px;
     }
 
+    p {
+      font-size: 13px;
+    }
+
     .say-card img {
-      max-width: 100%;  /* ✅ 화면에 맞게 꽉 채움 */
+      max-width: 100%; // 화면 너비에 맞춤
     }
 
     .say-card .text-box {
       h3, .title {
-        font-size: 18px;
+        font-size: 18px; // 너무 작지 않게
       }
       p {
         font-size: 12px;
@@ -156,7 +170,7 @@
   }
 }
 
-/* 480px 이하 */
+/* 480px 이하 (작은 모바일) */
 @media (max-width: 480px) {
   .say-section {
     margin: 150px 0 0 0;
@@ -164,6 +178,7 @@
     h2 {
       font-size: 20px;
     }
+
     p {
       font-size: 12px;
     }

@@ -8,7 +8,6 @@
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 8px;
-
   }
 
   p {
@@ -16,11 +15,9 @@
     font-weight: 500;
     color: #555;
     margin-bottom: 40px;
-
   }
 
   .swiper {
-    
     padding-bottom: 50px;
   }
 
@@ -47,20 +44,18 @@
 
       .badge {
         position: absolute;
-          top: 10px;
-          left: 0px;
-          background: #ffffff;
-          color: #000000;
-          font-size: 12px;
-          font-weight: bold;
-          padding: 6px;
+        top: 10px;
+        left: 0px;
+        background: #ffffff;
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 6px;
 
         &.extra {
           left: 70px;
         }
       }
-
-
 
       .wishlist-btn {
         position: absolute;
@@ -119,11 +114,10 @@
 
     .desc {
       font-size: 15px;
-        color: #111;
-        text-decoration: underline;
-        margin-bottom: 6px;
-        display: inline-block;
-
+      color: #111;
+      text-decoration: underline;
+      margin-bottom: 6px;
+      display: inline-block;
     }
 
     .price {
@@ -169,6 +163,104 @@
 
     .swiper-scrollbar-drag {
       background: #000;
+    }
+  }
+}
+
+/* ================== 반응형 ================== */
+
+/* 1024px 이하 (태블릿) */
+@media (max-width: 1024px) {
+  .today-section {
+    padding-left: 20px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .today-card {
+      .name {
+        font-size: 13px;
+      }
+      .desc {
+        font-size: 14px;
+      }
+      .price {
+        font-size: 14px;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px;
+      height: 30px;
+      top: -30px;
+    }
+  }
+}
+
+/* 768px 이하 (모바일) */
+@media (max-width: 768px) {
+  .today-section {
+    margin: 80px auto;
+    padding: 20px 10px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    .today-card {
+      .name {
+        font-size: 12px;
+      }
+      .desc {
+        font-size: 13px;
+      }
+      .price {
+        font-size: 13px;
+      }
+    }
+
+    /* 모바일에서 화살표 버튼 숨기기 */
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
+/* 480px 이하 (작은 모바일) */
+@media (max-width: 480px) {
+  .today-section {
+    margin: 60px auto;
+    padding: 15px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .today-card {
+      .name {
+        font-size: 11px;
+      }
+      .desc {
+        font-size: 12px;
+      }
+      .price {
+        font-size: 12px;
+      }
     }
   }
 }
