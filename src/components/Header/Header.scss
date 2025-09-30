@@ -90,6 +90,13 @@
           opacity: 0.7;
         }
       }
+      .mobile{
+        display:none;
+      
+        @media (max-width: 480px) {
+          display:block;
+        }
+      }
     }
   }
 
@@ -98,6 +105,10 @@
     background: #fff;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    
+     .icon.mobile {
+    display: none; // PC에서는 메뉴 아이콘 숨김
+  }
 
     .nav-main {
       display: flex;
@@ -527,4 +538,19 @@
     align-items: center;
     gap: 4px;
   }
+  .header{
+    .nav {
+      display: none;
+
+      &.open {
+        display: block !important; // 모바일에서 열릴 때
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+ 
 }
+

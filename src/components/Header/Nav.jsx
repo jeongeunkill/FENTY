@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import navData from "../../data/navData";
 import "./Header.scss";
 
-const Nav = () => {
+const Nav = ({ className }) => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   const handleMouseEnter = (id) => setActiveMenu(id);
   const handleMouseLeave = () => setActiveMenu(null);
 
   return (
-    <nav className="nav">
+    <nav className={className}>
       <ul className="nav-main">
         {navData.map((section) => (
           <li
